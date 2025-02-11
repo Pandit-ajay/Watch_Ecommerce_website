@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --dark-blue: #0A1D3C;
+    --light-gray: #E5E5E5;
+    --white: #FFF;
+    --light-peach: #F9E3BC;
+    --dark-gray: #3E3F43;
+    --light-black: #1D1D1D;
+}
+          /* ---Section one--- */
+
+.section{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.logo {
+    font-size: 3.3rem;
+    color: var(--dark-blue);
+    font-family: "Allison", serif;
+}
+
+nav{
+    width: 80%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navlinks a{
+    text-decoration: none;
+    margin-left: 1.5rem;
+    color: var(--dark-gray);
+    font-size: 1rem;
+    letter-spacing: .03rem;
+    position: relative;
+}
+
+.navlinks li a::after, .navlinks li .active::after{
+    content: "";
+    background: var(--dark-gray);
+    position: absolute;
+    height: .15rem;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: 1s ease;
+    transform-origin: left;
+}
+
+.navlinks li a:hover::after, .navlinks li .active::after{
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.line {
+    background: var(--dark-gray);
+    width: 2.5rem;
+    height: .2rem;
+    margin: .38rem;
+}
+
+header{
+    width: 80%;
+    height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.header-image {
+    width: 30rem;
+}
+
+.header-heading {
+    font-size: 5rem;
+    position: relative;
+}
+
+.header-heading::before{
+    content: "New";
+    position: absolute;
+    top: -60px;
+    color: var(--dark-blue);
+    font-family: "Allison", serif;
+}
+
+.product-name{
+    font-size: 1.7rem;
+}
+
+.pricing{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.btn-container {
+    display: flex;
+    margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    font-size: 1.1rem;
+    border: none;
+    padding: 1rem 1.7rem;
+    transition: .5s ease-in-out;
+}
+
+.btn-primary {
+    background: var(--light-gray);
+}
+
+.btn-primary:hover, .stwo-btn:hover, .s4-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: var(--dark-blue);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.btn-secondary:hover {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+                /* ---Section two--- */
+.section-two{
+    display: flex;
+    align-items: center;
+}
+
+.section-two-container{
+    background: var(--light-peach);
+    width: 100%;
+    height: 45vh;
+    transform: skewY(-6deg);
+}
+
+.section-two-container, .inner-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-cont{
+    transform: skewY(6deg);
+    width: 80%;
+    margin-top: 2.4rem;
+}
+
+.stwo-h1 {
+    color: var(--dark-gray);
+    font-size: 4rem;
+}
+
+.stwo-p {
+    font-size: .8rem;
+    color: var(--dark-gray);
+    line-height: 1.4rem;
+    max-width: 85%;
+}
+
+.stwo-pricing {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin: .4rem 0;
+}
+
+.stwo-btn {
+    padding: .8rem 1.5rem;
+    border: .1rem solid var(--light-black);
+    font-size: 1rem;
+    background: transparent;
+    transition: .4s ease-in-out;
+}
+
+.img2 {
+    width: 22rem;
+}
+
+          /* -----Section three------ */
+
+.s3-h {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+}
+
+.card{
+    background: var(--light-gray);
+    padding: .8rem;
+}
+
+.card-img{
+    width: 16rem;
+}
+
+.card-pricing {
+    font-size: 1rem;
+    margin-top: .2rem;
+    margin-bottom: .3rem;
+}
+
+/* ---------------------section four-------------------------------------- */
+
+.section-4 {
+    display: flex;
+    align-items: center;
+}
+
+.s4-container {
+    width: 100%;
+    height: 70vh;
+    background-image: url(images/watch.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.s4-container::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.544);
+    position: absolute;
+    inset: 0;
+}
+
+.s4-container .content{
+    z-index: 5;
+}
+
+.s4-off{
+    font-size: 4rem;
+    color: var(--light-peach);
+    font-family: "Allison", serif;
+    text-transform: uppercase;
+}
+
+.s4-h {
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.s4-btn {
+    font-size: 1.1rem;
+    padding: 1rem 1.7rem;
+    background: var(--light-peach);
+    border: none;
+    transition: .4s ease;
+}
+
+/* -------------------------------Section five-------------------------- */
+
+.grid-card-container {
+    width: 60%;
+    height: 80vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+}
+
+.grid-card {
+    background: var(--light-gray);
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grid-card:nth-child(1){
+    grid-row: 1/4;
+    background-image: url("images/rado\ watch.jpg");
+}
+
+.grid-card:nth-child(2){
+    background-image: url("images/geneve\ watch.jpg");
+}
+
+.grid-card:nth-child(3){
+    grid-row: 1/3;
+    background-image: url("images/tissot\ watch.jpg");
+}
+
+.grid-card:nth-child(4){
+    grid-row: 3/4;
+    background-image: url("images/cartier\ watch.jpg");
+}
+
+.grid-card:nth-child(5){
+    background-image: url("images/omega\ watch.jpg");
+}
+
+.grid-card:nth-child(6){
+    background-image: url("images/fitron\ watch.jpg");
+}
+
+.grid-card::before{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.544);
+    inset: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s ease-in-out;
+}
+
+.grid-card:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.grid-card::after{
+    content: attr(collection);
+    position: absolute;
+    text-transform: uppercase;
+    background: var(--light-peach);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: .8rem 1.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+}
+
+.grid-card:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ------------------------------------------------Footer----------------------------------------- */
+
+footer {
+    background: var(--light-black);
+    width: 100%;
+    height: 20vh;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---Media Queries--- */
+
+@media screen and (max-width: 500px) {
+    .header-image{
+        display: none;
+    }
+               /* ---Section one--- */
+    .navlinks {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        background: var(--light-gray);
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        right: 100%;
+        z-index: 2;
+        gap: 2rem;
+        transition: .5s ease-in-out;
+    }
+
+    .navlinks-active {
+        right: 0;
+    }
+
+    .navlinks li a{
+        font-size: 1.3rem;
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 5;
+    }
+
+    .logo{
+        z-index: 5;
+    }
+
+    .header-heading {
+        font-size: 4rem;
+    }
+
+    header {
+        justify-content: flex-start;
+    }
+
+     /* ---Section two--- */
+
+     .img2 {
+        display: none;
+     }
+
+     .stwo-h1 {
+        font-size: 2.9rem;
+     }
+
+     .stwo-p{
+        font-size: .90rem;
+        max-width: 100%;
+     }
+
+     .stwo-pricing {
+        font-size: 1.4rem;
+     }
+
+     .stwo-btn {
+        font-size: 1rem;
+        padding: .7rem 1rem;
+     }
+
+     .section-two-container {
+        height: 45vh;
+     }
+
+     .inner-cont {
+        width: 90%;
+     }
+
+     /* ------Section three------ */
+
+     .card-img {
+        width: 13rem;
+     }
+
+     /* ---------------Section four----------------- */
+
+    .s4-h {
+        font-size: 2.8rem;
+    }
+
+    .s4-off {
+        font-size: 3.3rem;
+    }
+
+    .s4-btn {
+        font-size: 1rem;
+    }
+
+    /* ----------------------------Section five------------------------------ */
+
+    .grid-card-container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 90%;
+    }
+
+    .grid-card:nth-child(1), .grid-card:nth-child(3) {
+        grid-row: 1/2;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    .footer-p{
+        font-size: 1rem;
+    }
+}
+
+
